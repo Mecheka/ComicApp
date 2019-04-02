@@ -3,6 +3,7 @@ package com.traning.suriya.comicapp.scene.comic
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
@@ -10,7 +11,9 @@ import android.view.View
 import android.widget.Toast
 import com.traning.suriya.comicapp.R
 import com.traning.suriya.comicapp.databinding.ActivityMainBinding
+import com.traning.suriya.comicapp.model.comic.Comic
 import com.traning.suriya.comicapp.model.comic.ComicResponce
+import com.traning.suriya.comicapp.scene.chapter.ChapterActivity
 import com.traning.suriya.comicapp.util.MySliderAdapter
 import com.traning.suriya.comicapp.util.PicassoImageLoadingService
 import dagger.android.support.DaggerAppCompatActivity
@@ -18,9 +21,6 @@ import ss.com.bannerslider.Slider
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(), ComicAdapter.OnItemComicClick {
-    override fun onItenClick() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     @Inject
     lateinit var factory: ViewModelProvider.Factory
@@ -69,5 +69,13 @@ class MainActivity : DaggerAppCompatActivity(), ComicAdapter.OnItemComicClick {
         }
         binding.recyclerComic.adapter = adapter
         adapter?.notifyDataSetChanged()
+    }
+
+    override fun onItemClick(comic: Comic) {
+        Intent().apply {
+            this.setClass(this@MainActivity, ChapterActivity::class.java)
+            this.putExtra("comic", comic)
+            startActivity(this)
+        }
     }
 }

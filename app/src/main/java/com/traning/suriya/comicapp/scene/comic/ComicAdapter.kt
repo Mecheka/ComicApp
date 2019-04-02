@@ -11,12 +11,13 @@ class ComicAdapter(private val list: List<Comic>, private val onClickListener: O
 
     lateinit var binding: ItemComicBinding
 
-    fun onItemClick(){
-        onClickListener.onItenClick()
+    fun onItemClick(comic: Comic){
+        onClickListener.onItemClick(comic)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): ComicViewHolder {
         binding = ItemComicBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding.adapter = this
         return ComicViewHolder(binding)
     }
 
@@ -38,6 +39,6 @@ class ComicAdapter(private val list: List<Comic>, private val onClickListener: O
     }
 
     interface OnItemComicClick{
-        fun onItenClick()
+        fun onItemClick(comic: Comic)
     }
 }
