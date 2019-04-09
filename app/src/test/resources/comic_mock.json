@@ -1,0 +1,107 @@
+{
+  "status": true,
+  "data": [
+    {
+      "_id": "5c6e29d61c9d440000bada02",
+      "mangaId": 1,
+      "name": "Dragon Ball",
+      "image": "https://avt.mkklcdnv3.com/avatar_225/3326-read_dragon_ball_manga_online_for_free2.jpg"
+    },
+    {
+      "_id": "5c6e2a371c9d440000bada03",
+      "mangaId": 2,
+      "name": "The Amazing Spider-Man (1963)",
+      "image": "https://2.bp.blogspot.com/UyIClw5KWvyrIHioRjGeqaX3BdNRLF0jdlZTHesIxLZy6zX9zOwY26UrF6w5j_v5rGakyQxdPfoi=s1600"
+    },
+    {
+      "_id": "5c6e2a731c9d440000bada06",
+      "mangaId": 3,
+      "name": "Doraemon",
+      "image": "https://avt.mkklcdnv3.com/avatar_225/1279-doraemon.jpg"
+    },
+    {
+      "_id": "5c6e2a971c9d440000bada07",
+      "mangaId": 4,
+      "name": "Spider-Man",
+      "image": "https://avt.mkklcdnv3.com/avatar_225/11297-spiderman.jpg"
+    },
+    {
+      "_id": "5c6e2ac51c9d440000bada08",
+      "mangaId": 5,
+      "name": "The Invincible Iron Man",
+      "image": "https://cdn.shopify.com/s/files/1/0882/5118/products/Invincible-Iron-Man-Number-1-2137789_1024x1024.jpeg?v=1442250415"
+    },
+    {
+      "_id": "5c6e2ae01c9d440000bada09",
+      "mangaId": 6,
+      "name": "Ant-Man & The Wasp",
+      "image": "https://i.pinimg.com/originals/66/41/b1/6641b10b731f0140a90c5a7fa641daf9.jpg"
+    },
+    {
+      "_id": "5c6e2b0e1c9d440000bada0a",
+      "mangaId": 7,
+      "name": "Marvel Zombies",
+      "image": "http://1.bp.blogspot.com/-vNUqD-HUcdQ/Vp5GXqrP7fI/AAAAAAAAIEE/OSIFYvS3D7k/s1600/0.jpg"
+    },
+    {
+      "_id": "5c6e2b2e1c9d440000bada0b",
+      "mangaId": 8,
+      "name": "Super Hero Adventures",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKWBY9fuCKhnDI-wwoXwJ6zF1O6x9ELBaE7Y4YwAK1LahojieB"
+    },
+    {
+      "_id": "5c6e2b4a1c9d440000bada0c",
+      "mangaId": 9,
+      "name": "Cable",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/494347/494347._SX1280_QL80_TTD_.jpg"
+    },
+    {
+      "_id": "5c6e2b641c9d440000bada0d",
+      "mangaId": 10,
+      "name": "X-Force",
+      "image": "https://ss-images.catscdn.vn/2018/05/31/2921811/x-men_92_vol_1_3_textless.jpg"
+    },
+    {
+      "_id": "5c6e2b7a1c9d440000bada0e",
+      "mangaId": 11,
+      "name": "Avengers",
+      "image": "https://www.librairiezbookstore.com/40046-large_default/marvel-comics-digest-7-ant-man.jpg"
+    },
+    {
+      "_id": "5c6e2b991c9d440000bada0f",
+      "mangaId": 12,
+      "name": "Thor",
+      "image": "https://i1.wp.com/graphicpolicy.com/wp-content/uploads/2017/10/MarvelComicsDigest_03-1.jpg?resize=736%2C991&ssl=1"
+    },
+    {
+      "_id": "5c6e2bb91c9d440000bada10",
+      "mangaId": 13,
+      "name": "X-men Wolverine",
+      "image": "https://darksidecomics.s3.us-east-2.amazonaws.com/previews/AUG181583.jpg?lastmod=1533154926"
+    },
+    {
+      "_id": "5c6e2bd31c9d440000bada11",
+      "mangaId": 14,
+      "name": "DC Essential Graphic Novels 2016",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/332255/332255._SX1280_QL80_TTD_.jpg"
+    },
+    {
+      "_id": "5c6e2bf11c9d440000bada12",
+      "mangaId": 15,
+      "name": "Aqua Man",
+      "image": "https://d1466nnw0ex81e.cloudfront.net/n_iv/600/3723215.jpg"
+    },
+    {
+      "_id": "5c6e2c0b1c9d440000bada13",
+      "mangaId": 16,
+      "name": "Variant Covers",
+      "image": "https://insightcomics.com/wp-content/uploads/2018/09/76348-64734-cover.jpg"
+    },
+    {
+      "_id": "5c6e2c221c9d440000bada14",
+      "mangaId": 17,
+      "name": "Batman",
+      "image": "http://4.bp.blogspot.com/-UVWO6oyjJqU/U_3jLJzL3MI/AAAAAAAEnhQ/_SyLqkLRvVo/s1600/-000.jpg"
+    }
+  ]
+}

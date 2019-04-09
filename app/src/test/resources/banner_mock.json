@@ -1,0 +1,20 @@
+{
+  "status": true,
+  "data": [
+    {
+      "_id": "5c6e28e11c9d440000bad9fd",
+      "bannerId": 1,
+      "link": "https://thawing-peak-70844.herokuapp.com/dragonball.png"
+    },
+    {
+      "_id": "5c6e29171c9d440000bad9fe",
+      "bannerId": 2,
+      "link": "https://thawing-peak-70844.herokuapp.com/doreamon.png"
+    },
+    {
+      "_id": "5c6e293f1c9d440000bad9ff",
+      "bannerId": 3,
+      "link": "https://thawing-peak-70844.herokuapp.com/adventuretime.png"
+    }
+  ]
+}
