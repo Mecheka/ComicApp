@@ -5,13 +5,11 @@ import android.util.Log
 import com.traning.suriya.comicapp.base.BaseViewModel
 import com.traning.suriya.comicapp.model.combine.BannerAndComic
 import com.traning.suriya.comicapp.repository.MainRepository
-import com.traning.suriya.comicapp.service.ComicAPI
 import com.traning.suriya.comicapp.util.StatusViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import javax.inject.Inject
 
-class MainViewModel constructor(private val repository: MainRepository) : BaseViewModel() {
+class MainViewModel(private val repository: MainRepository) : BaseViewModel() {
 
     private val bannerLiveData = MutableLiveData<Status>()
 

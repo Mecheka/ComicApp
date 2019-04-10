@@ -1,24 +1,21 @@
 package com.traning.suriya.comicapp.scene.viewdetail
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.view.ViewPager
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.traning.suriya.comicapp.R
 import com.traning.suriya.comicapp.databinding.ActivityChapterDetailBinding
 import com.traning.suriya.comicapp.model.chapter.Chapter
-import dagger.android.support.DaggerAppCompatActivity
-import javax.inject.Inject
+import org.koin.android.viewmodel.ext.android.viewModel
 
-class ChapterDetailActivity : DaggerAppCompatActivity() {
+class ChapterDetailActivity : AppCompatActivity() {
 
-    @Inject
-    lateinit var factory: ViewModelProvider.Factory
-    private lateinit var viewModel: ChapterDetailViewModel
+    private val viewModel: ChapterDetailViewModel by viewModel()
     private lateinit var binding: ActivityChapterDetailBinding
     val chapter: Chapter by lazy {
         intent.getParcelableExtra("chapter") as Chapter
@@ -31,7 +28,6 @@ class ChapterDetailActivity : DaggerAppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_chapter_detail)
         binding.model = chapter
         binding.viewControler = this
-        viewModel = ViewModelProviders.of(this, factory).get(ChapterDetailViewModel::class.java)
         initData()
         binding.pagerChapter.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(p0: Int) {

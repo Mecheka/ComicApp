@@ -6,6 +6,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
@@ -20,7 +21,7 @@ import dagger.android.support.DaggerAppCompatActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 import javax.inject.Inject
 
-class ChapterActivity : DaggerAppCompatActivity(), ChapterAdapter.OnChapterClick {
+class ChapterActivity : AppCompatActivity(), ChapterAdapter.OnChapterClick {
 
     private val comic: Comic by lazy {
         intent.getParcelableExtra("comic") as Comic

@@ -9,9 +9,8 @@ import com.traning.suriya.comicapp.service.ComicAPI
 import com.traning.suriya.comicapp.util.StatusViewModel
 import javax.inject.Inject
 
-class ChapterDetailViewModel @Inject constructor(service: ComicAPI) : BaseViewModel() {
+class ChapterDetailViewModel constructor(private val repository : ChapterDetailRepository) : BaseViewModel() {
 
-    private val repository = ChapterDetailRepository(service)
     val detailLiveData = MutableLiveData<Status>()
 
     init {
