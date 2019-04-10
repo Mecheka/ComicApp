@@ -8,7 +8,6 @@ import io.reactivex.schedulers.Schedulers
 import retrofit2.Response
 import javax.inject.Singleton
 
-@Singleton
 class ChapterRepository(private val service: ComicAPI) {
 
     fun getChapterByComicId(mangaId: Int): Single<Response<ChapterResponce>> {

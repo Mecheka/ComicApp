@@ -4,13 +4,9 @@ import android.arch.lifecycle.MutableLiveData
 import com.traning.suriya.comicapp.base.BaseViewModel
 import com.traning.suriya.comicapp.model.chapter.Chapter
 import com.traning.suriya.comicapp.repository.ChapterRepository
-import com.traning.suriya.comicapp.service.ComicAPI
 import com.traning.suriya.comicapp.util.StatusViewModel
-import javax.inject.Inject
 
-class ChapterViewModel @Inject constructor(service: ComicAPI) : BaseViewModel() {
-
-    private val repository = ChapterRepository(service)
+class ChapterViewModel constructor(private val repository: ChapterRepository) : BaseViewModel() {
 
     val chapterLiveData = MutableLiveData<Status>()
 
@@ -21,20 +17,20 @@ class ChapterViewModel @Inject constructor(service: ComicAPI) : BaseViewModel() 
     fun getChapter(mangaId: Int) {
         chapterLiveData.value = Status.Loading(ViewDataBundle())
         addDisposable(
-                repository.getChapterByComicId(mangaId)
-                        .subscribe({ responce ->
-                            if (responce.code() == 200) {
-                                responce.body()?.data?.let {
-                                    chapterLiveData.value = Status.Success(ViewDataBundle(it))
-                                } ?: run {
-                                    chapterLiveData.value = Status.SuccessWithNoData(ViewDataBundle())
-                                }
-                            } else {
-                                chapterLiveData.value = Status.SuccessWithNoData(ViewDataBundle())
-                            }
-                        }, {
-                            chapterLiveData.value = Status.Error(it.message!!, ViewDataBundle())
-                        })
+            repository.getChapterByComicId(mangaId)
+                .subscribe({ responce ->
+                    if (responce.code() == 200) {
+                        responce.body()?.data?.let {
+                            chapterLiveData.value = Status.Success(ViewDataBundle(it))
+                        } ?: run {
+                            chapterLiveData.value = Status.SuccessWithNoData(ViewDataBundle())
+                        }
+                    } else {
+                        chapterLiveData.value = Status.SuccessWithNoData(ViewDataBundle())
+                    }
+                }, {
+                    chapterLiveData.value = Status.Error(it.message!!, ViewDataBundle())
+                })
         )
     }
 

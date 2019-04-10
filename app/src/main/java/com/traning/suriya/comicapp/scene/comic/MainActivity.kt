@@ -17,21 +17,19 @@ import com.traning.suriya.comicapp.scene.chapter.ChapterActivity
 import com.traning.suriya.comicapp.util.MySliderAdapter
 import com.traning.suriya.comicapp.util.PicassoImageLoadingService
 import dagger.android.support.DaggerAppCompatActivity
+import org.koin.android.viewmodel.ext.android.viewModel
 import ss.com.bannerslider.Slider
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(), ComicAdapter.OnItemComicClick {
 
-    @Inject
-    lateinit var factory: ViewModelProvider.Factory
-    private lateinit var viewModel: MainViewModel
+    private val viewModel: MainViewModel by viewModel()
 
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        viewModel = ViewModelProviders.of(this, factory).get(MainViewModel::class.java)
 
         Slider.init(PicassoImageLoadingService())
 

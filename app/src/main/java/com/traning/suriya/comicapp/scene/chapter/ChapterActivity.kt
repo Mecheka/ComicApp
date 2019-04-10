@@ -17,6 +17,7 @@ import com.traning.suriya.comicapp.model.chapter.Chapter
 import com.traning.suriya.comicapp.model.comic.Comic
 import com.traning.suriya.comicapp.scene.viewdetail.ChapterDetailActivity
 import dagger.android.support.DaggerAppCompatActivity
+import org.koin.android.viewmodel.ext.android.viewModel
 import javax.inject.Inject
 
 class ChapterActivity : DaggerAppCompatActivity(), ChapterAdapter.OnChapterClick {
@@ -26,14 +27,11 @@ class ChapterActivity : DaggerAppCompatActivity(), ChapterAdapter.OnChapterClick
     }
 
     private lateinit var binding: ActivityChapterBinding
-    @Inject
-    lateinit var factory: ViewModelProvider.Factory
-    private lateinit var viewModel: ChapterViewModel
+    private val viewModel: ChapterViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_chapter)
-        viewModel = ViewModelProviders.of(this, factory).get(ChapterViewModel::class.java)
 
         initInstance()
         initData()

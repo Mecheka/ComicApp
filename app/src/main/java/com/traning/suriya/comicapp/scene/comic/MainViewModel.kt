@@ -11,9 +11,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class MainViewModel @Inject constructor(service: ComicAPI) : BaseViewModel() {
+class MainViewModel constructor(private val repository: MainRepository) : BaseViewModel() {
 
-    private val repository = MainRepository(service)
     private val bannerLiveData = MutableLiveData<Status>()
 
     init {

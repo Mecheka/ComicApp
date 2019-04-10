@@ -19,16 +19,6 @@ internal abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(MainViewModel::class)
-    protected abstract fun bindsMainViewModel(viewModel: MainViewModel): ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(ChapterViewModel::class)
-    protected abstract fun bindsChapterViewModel(viewModel: ChapterViewModel): ViewModel
-
-    @Binds
-    @IntoMap
     @ViewModelKey(ChapterDetailViewModel::class)
     protected abstract fun bindsChapterDetailViewModel(viewModel: ChapterDetailViewModel): ViewModel
 }

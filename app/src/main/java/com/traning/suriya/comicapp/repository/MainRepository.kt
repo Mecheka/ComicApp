@@ -8,9 +8,7 @@ import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
-import javax.inject.Singleton
 
-@Singleton
 class MainRepository(private val service: ComicAPI) {
 
     fun getComicAndBanner(): Single<BannerAndComic> {
