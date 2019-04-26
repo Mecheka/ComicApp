@@ -29,9 +29,10 @@ val viewmodelModule = module {
 val repositoryModule = module {
     factory { ChapterRepository(service = get()) }
     factory { ChapterDetailRepository(service = get()) }
-    scope(named<MainActivity>()){
-        scoped {
-            MainRepository(service = get())
-        }
-    }
+//    scope(named<MainActivity>()){
+//        scoped {
+//            MainRepository(service = get())
+//        }
+//    }
+    factory { MainRepository(service = get()) }
 }
